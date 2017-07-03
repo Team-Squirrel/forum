@@ -1,0 +1,34 @@
+Application Back-end (Server) - up to 40%
+
+At least 5 different public dynamic web pages
+ - home page (with list of recently active threads)
+ - browse all threads
+ - browse unanswered threads
+ - view thread
+ - login
+ - register page
+ - tag system (browse system)
+At least 3 different private (authenticated) dynamic web pages
+  - create new thread
+  - view profile (will list info for user, like his threads and his replies in threads)
+  - list opened threads from you
+  - list threads that you have commented on
+At least 5 different public RESTful routes for AJAX
+ - get all threads
+At least 1 private (authenticated) route for AJAX
+ - save reply to thread
+ - save new thread
+ - up/down vote a thread
+ - select correct reply
+ - get user info (like points and stuff)
+Use Express for the server
+Use an MV-* pattern
+Use MongoDB
+ - models
+  - user
+  - thread
+  - reply
+Use Passport - for managing users
+Implement WebSockets
+ - Notifcations about up/down vote, answer in discution you are interested in
+ - The notifications should be sent even if the user is not currently connected to the socket (like fb notifications)
