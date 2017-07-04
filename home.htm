@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+        <title>Forum</title>
+
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+   
+<body class="home-page new-topbar">
+
+<header class="so-header js-so-header _fixed">
+    <div class="-container">
+        <div class="-main">            
+            <a href="https://forum.com/" class="-logo">
+                <span class="img">F O R U M</span>
+            </a>
+
+            <nav class="navigation" role="navigation" aria-label="site navigation">
+                <ol class="-list">
+                    <li class="-item">
+                        <a id="nav-questions" href="https://forum.com/questions" class="-link">Questions</a>
+                    </li>
+                    <li class="-item">
+                        <a id="nav-tags" href="https://forum.com/tags" class="-link">Tags</a>
+                    </li>
+                    <li class="-item">
+                        <a id="nav-users" href="https://forum.com/users" class="-link">Users</a>
+                    </li>
+                </ol>
+            </nav>
+
+            <form id="search" action="/search" method="get" class="searchbar" autocomplete="off" role="search">
+                <svg role="icon" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.864 11.321L18 16.5 16.5 18l-5.178-5.136v-.357a7 7 0 1 1 1.186-1.186h.356zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"></path></svg>
+                <input name="q" placeholder="Search..." tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field" type="text">
+                 <button type="submit" class="btn js-search-submit">
+                      <svg role="icon" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"></svg>
+                  </button>
+             </form>
+    </nav>
+</div>
+    </div>
+</header>
+
+<div class="container _full ">
+        
+<div id="content" class="snippet-hidden">
+
+<div class="s-hero">
+    <div class="-container g-row jc-sp-between ai-center">
+        <div class="g-col6">
+            <h1 class="-title">Ask, Learn, Share </h1>
+            <p class="-paragraph">Each month, over 50 trillion Indians come to F O R U M to learn and share their knowledge.</p>
+            <p class="-paragraph">Join the world’s largest community.</p>
+        </div>
+
+        <div class="s-signup _hero g-col5">
+
+ <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="carousel-pic" src="./imgs/question4.png" alt="...">
+                    <div class="carousel-caption">
+                        <h4 class="carousel-text">Ask</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="carousel-pic" src="./imgs/forum_icon.png" alt="...">
+                    <div class="carousel-caption">
+                        <h4 class="carousel-text">Share</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="carousel-pic" src="./imgs/learning-icon.png" alt="...">
+                    <div class="carousel-caption">
+                        <h4 class="carousel-text">Learn</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+</div>
+
+            <form id="login-form" action="/users/signup" method="POST">
+    
+                    <div id="se-login-fields">
+
+<!-- CAN BE USED FOR SIGN UP PAGE
+                        <input name="legalLinksShown" value="1" type="hidden">
+
+                        <div class="input-group">
+                            <div class="g-row">
+                                <label for="display-name" class="g-col -fill">Display name</label>
+                                <div class="g-col">
+                                    <input id="display-name" name="display-name" class="f-input" placeholder="J. Doe" data-error-my="right top" data-error-at="left center" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="g-row">
+                                <label for="email" class="g-col -fill">Email address</label>
+                                <div class="g-col">
+                                    <input id="email" name="email" maxlength="100" class="f-input" placeholder="you@example.com" data-error-my="right top" data-error-at="left center" type="email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="g-row">
+                                <label for="password" class="g-col -fill">Password</label>
+                                <div class="g-col">
+                                    <input id="password" name="password" class="f-input" placeholder="********" data-error-my="right top" data-error-at="left center" type="password">
+                                </div>
+                            </div>
+                        </div>
+-->
+
+                        <div class="button-group g-row ai-center jc-sp-between">
+                            <input id="submit-button" name="submit-button" class="btn-outlined -white _medium _block" value="Sign Up" type="button">
+                        </div>
+                    </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>          
+  
+<div class="inner-content">
+<div id="mainbar">
+    <div class="subheader">
+        <h1 id="h-top-questions">
+                Top Questions
+        </h1>
+        <div id="tabs">
+            <a class="youarehere" href="https://forum.com/?tab=interesting" data-nav-xhref="" title="Questions that may be of interest to you based on your history and tag preference" data-value="interesting" data-shortcut="">interesting</a>
+            <a href="https://forum.com/?tab=featured" data-nav-xhref="" title="Questions with an active bounty" data-value="featured" data-shortcut="B">
+            <span class="bounty-indicator-tab">388</span>   featured</a>
+            <a href="https://forum.com/?tab=hot" data-nav-xhref="" title="Questions with the most views, answers, and votes over the last few days" data-value="hot" data-shortcut="H">hot</a>
+            <a href="https://forum.com/?tab=week" data-nav-xhref="" title="Questions with the most views, answers, and votes this week" data-value="week" data-shortcut="W">week</a>
+            <a href="https://forum.com/?tab=month" data-nav-xhref="" title="Questions with the most views, answers, and votes this month" data-value="month" data-shortcut="M">month</a>
+        </div>
+    </div>
+<div id="qlist-wrapper">
+
+<div id="question-mini-list">
+        
+
+<div class="question-summary narrow" id="question-summary-44892470">
+    <div onclick="window.location.href='/questions/44892470/what-actually-is-meant-by-a-memory-model'" class="cp">
+        <div class="votes">
+            <div class="mini-counts"><span title="0 votes">0</span></div>
+            <div>votes</div>
+        </div>
+        <div class="status unanswered">
+            <div class="mini-counts"><span title="0 answers">0</span></div>
+            <div>answers</div>
+        </div>
+        <div class="views">
+            <div class="mini-counts"><span title="2 views">2</span></div>
+            <div>views</div>
+        </div>
+    </div>
+    <div class="summary">
+        
+        <h3><a href="https://forum.com/questions/44892470/what-actually-is-meant-by-a-memory-model" class="question-hyperlink">What actually is meant by a memory model</a></h3>
+        <div class="tags t-memory">
+            <a href="https://forum.com/questions/tagged/memory" class="post-tag" title="" rel="tag">memory</a> 
+        </div>
+        <div class="started">
+            <a href="https://forum.com/questions/44892470/what-actually-is-meant-by-a-memory-model" class="started-link">asked <span title="2017-07-03 19:07:43Z" class="relativetime">46 secs ago</span></a>
+            <a href="https://forum.com/users/5644742/mikhail-tal">Mikhail Tal</a> <span class="reputation-score" title="reputation score " dir="ltr">8</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="question-summary narrow" id="question-summary-44892469">
+    <div onclick="window.location.href='/questions/44892469/angular-js-objects-of-objects-displaying-last-content'" class="cp">
+        <div class="votes">
+            <div class="mini-counts"><span title="0 votes">0</span></div>
+            <div>votes</div>
+        </div>
+        <div class="status unanswered">
+            <div class="mini-counts"><span title="0 answers">0</span></div>
+            <div>answers</div>
+        </div>
+        <div class="views">
+            <div class="mini-counts"><span title="2 views">2</span></div>
+            <div>views</div>
+        </div>
+    </div>
+    <div class="summary">
+        
+        <h3><a href="https://forum.com/questions/44892469/angular-js-objects-of-objects-displaying-last-content" class="question-hyperlink">Angular js objects of objects displaying last content</a></h3>
+        <div class="tags t-angularjs t-json t-angularjs-ng-repeat t-javascript-objects">
+            <a href="https://forum.com/questions/tagged/angularjs" class="post-tag" title="" rel="tag">angularjs</a> <a href="https://stackoverflow.com/questions/tagged/json" class="post-tag" title="show questions tagged 'json'" rel="tag">json</a> <a href="https://stackoverflow.com/questions/tagged/angularjs-ng-repeat" class="post-tag" title="" rel="tag">angularjs-ng-repeat</a> <a href="https://stackoverflow.com/questions/tagged/javascript-objects" class="post-tag" title="" rel="tag">javascript-objects</a> 
+        </div>
+        <div class="started">
+            <a href="https://forum.com/questions/44892469/angular-js-objects-of-objects-displaying-last-content" class="started-link">asked <span title="2017-07-03 19:07:42Z" class="relativetime">47 secs ago</span></a>
+            <a href="https://forum.com/users/4281964/kumail-hussain">Kumail Hussain</a> <span class="reputation-score" title="reputation score " dir="ltr">97</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="question-summary narrow" id="question-summary-44892468">
+    <div onclick="window.location.href='/questions/44892468/simple-forgotpassword-function'" class="cp">
+        <div class="votes">
+            <div class="mini-counts"><span title="0 votes">0</span></div>
+            <div>votes</div>
+        </div>
+        <div class="status unanswered">
+            <div class="mini-counts"><span title="0 answers">0</span></div>
+            <div>answers</div>
+        </div>
+        <div class="views">
+            <div class="mini-counts"><span title="2 views">2</span></div>
+            <div>views</div>
+        </div>
+    </div>
+    <div class="summary">
+        
+        <h3><a href="https://forum.com/questions/44892468/simple-forgotpassword-function" class="question-hyperlink">simple Forgotpassword function</a></h3>
+        <div class="tags t-java t-sql">
+            <a href="https://forum.com/questions/tagged/java" class="post-tag" title="show questions tagged 'java'" rel="tag">java</a> <a href="https://stackoverflow.com/questions/tagged/sql" class="post-tag" title="" rel="tag">sql</a> 
+        </div>
+        <div class="started">
+            <a href="https://forum.com/questions/44892468/simple-forgotpassword-function" class="started-link">asked <span title="2017-07-03 19:07:38Z" class="relativetime">51 secs ago</span></a>
+            <a href="https://forum.com/users/8250102/abdul-wahab">Abdul Wahab</a> <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <br class="cbt">
+</div>
+        </div>
+        </div>
+    </div>
+
+<footer class="s-footer js-footer _short" role="contentinfo">
+    <div class="-container">
+        <div class="g-row js-sp-between">
+            <div class="-logo">
+                <a href="https://forum.com/">F O R U M</a>
+            </div>
+            <div class="-copyright text-right">
+                <div class="g-column jc-sp-between">
+                    <ul class="-list">
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 1, link:4 })" href="https://forum.blog/">Blog</a></li>
+                        <li class="-item"><a href="https://www.facebook.com/forum/" class="-link">Facebook</a></li>
+                        <li class="-item"><a href="https://twitter.com/forum" class="-link">Twitter</a></li>
+                        <li class="-item"><a href="https://linkedin.com/company/forum" class="-link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body></html>
