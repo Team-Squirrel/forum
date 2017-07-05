@@ -8185,7 +8185,12 @@ a.loading:before {
     background-repeat: no-repeat, no-repeat;
     font-size: 17px;
     line-height: 1.53333333;
-    overflow: hidden
+    overflow: hidden;
+}
+
+.s-heroBrowseThreads{
+    height: 140px;
+    border-radius: 10px;
 }
 
 .s-hero:after {
@@ -8236,7 +8241,7 @@ a.loading:before {
     max-width: 1090px;
     width: 100%;
     position: relative;
-    min-height: 250px;
+    min-height: 100px;
     z-index: 2
 }
 
