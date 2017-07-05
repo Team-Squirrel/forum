@@ -87,8 +87,7 @@ video {
     vertical-align: baseline
 }
 
-/* CAROUSEL START
-*/
+/* CAROUSEL START*/
 .carousel-control.left, .carousel-control.right {
   background: none !important;
   filter: progid: none !important;
@@ -109,8 +108,61 @@ video {
     max-height: 200px;
 }
 
-/* CAROUSEL END
-*/
+/* CAROUSEL END*/
+
+/* VIEW THREAD START*/
+
+.post, .commentThread {
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 10px;
+    font-size: 12pt;
+    font-family: serif;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1088EC;
+}
+
+.post {
+    border-color: #1088EC;#106DF6
+}
+
+.commentThread {
+    border-style: dotted;
+    border-color: #1088EC;
+	margin-left: 50px;
+}
+
+.threadUl {
+	list-style: none;
+}
+
+.author {
+	font-size: 20px;
+    font-style: black;
+}
+.anonymous {
+	color: darkblue;
+}
+.post .author::after {
+	content: "wrote:";
+    font-size: 12px;
+}
+
+.commentThread .author::after {
+	content: "commented:";
+    font-size: 12px;
+}
+
+.content {
+	font-size: 16px;
+    font-family: serif;
+    background-color: white;
+}
+
+
+
+/* VIEW THREAD END*/
 
 article,
 aside,
