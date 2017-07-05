@@ -2,25 +2,28 @@ Application Back-end (Server) - up to 40%
 
 At least 5 different public dynamic web pages
  - home page (with list of recently active threads)
- - browse all threads
- - browse unanswered threads
+ - browse threads (with option to view "newest", "unaswered")
+ - browse users
  - view thread
+ - channels (again some sort/filter options) -- the sort/filtering could be done with AJAX calls
  - login
  - register page
- - tag system (browse system)
 At least 3 different private (authenticated) dynamic web pages
   - create new thread
   - view profile (will list info for user, like his threads and his replies in threads)
-  - list opened threads from you
-  - list threads that you have commented on
+   - 3 tabs
+     - info or profile - will show info and stats for the user
+      - list opened threads from you
+      - list threads that you have commented on
+     - notifications - will show notifications (unread ones on top)
+     - settings - edit info for the user (visible only if the user is logged in)
 At least 5 different public RESTful routes for AJAX
- - get all threads
+ - get threads
+ - get users
+ - get channels
 At least 1 private (authenticated) route for AJAX
- - save reply to thread
- - save new thread
  - up/down vote a thread
  - select correct reply
- - get user info (like points and stuff)
 Use Express for the server
 Use an MV-* pattern
 Use MongoDB
@@ -28,6 +31,7 @@ Use MongoDB
   - user
   - thread
   - reply
+  - channel
 Use Passport - for managing users
 Implement WebSockets
  - Notifcations about up/down vote, answer in discution you are interested in
