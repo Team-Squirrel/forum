@@ -119,6 +119,19 @@ video {
     padding-left: 10px;
 }
 
+.tab-container{
+    height: 400px;
+}
+
+.tab-pane{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+
 /* VIEW THREAD START*/
 
 .post, .commentThread {
