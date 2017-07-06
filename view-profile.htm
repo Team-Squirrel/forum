@@ -92,13 +92,20 @@
         	<div class="tab-content-profile">
         		<div role="tabpanel" class="tab-pane fade in active" id="Info">
                     <p>User Name: <span class="username-span">Todor Jivkov</span></p>
-                    <p>E-mail: <span class="-span">Todor@jivkov.bg</span></p>
+                    <p>E-mail: <span class="email-span">Todor@jivkov.bg</span></p>
                 </div>
         		<div role="tabpanel" class="tab-pane fade" id="Notifications">
                     2
                 </div>
         		<div role="tabpanel" class="tab-pane fade" id="Settings">
-                    3
+                    <form action="/action_page.php">
+                        <input type="checkbox"><div class="setting-description-first">Show your e-mail next to username</div></input>
+                        <br>
+
+                        <input type="checkbox"><div class="setting-description-last">Receive e-mails from F O R U M</div></input>
+                        <br>
+                        <input class="submit-settings-BTN" type="submit" value="Save Settings">
+                    </form>
                 </div>
         	</div>
         </div>

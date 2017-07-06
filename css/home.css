@@ -115,6 +115,8 @@ video {
     height: 300px;
 }
 
+/* VIEW PROFILE START*/
+
 .userbox{
     padding-left: 10px;
 }
@@ -131,6 +133,23 @@ video {
     display: block;
 }
 
+#Info{
+    padding-top: 10px;
+}
+
+.setting-description-first{
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.setting-description-last{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* VIEW PROFILE END*/
 
 /* VIEW THREAD START*/
 
