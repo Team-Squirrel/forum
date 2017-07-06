@@ -110,6 +110,11 @@ video {
 
 /* CAROUSEL END*/
 
+#start-thread-text{
+    width: 100%;
+    height: 300px;
+}
+
 /* VIEW THREAD START*/
 
 .post, .commentThread {
