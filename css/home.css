@@ -115,6 +115,10 @@ video {
     height: 300px;
 }
 
+.userbox{
+    padding-left: 10px;
+}
+
 /* VIEW THREAD START*/
 
 .post, .commentThread {
