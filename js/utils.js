@@ -34,3 +34,68 @@ let date = (function() {
     }
 
 })();
+
+let fileIdGenerator = (function () {
+    let id = 0;
+
+    function next() {
+        id += 1;
+        return id;
+    }
+
+    return {
+        next: next
+    };
+})();
+
+let threadIdGenerator = (function () {
+    let id = 0;
+    
+    function next() {
+        id += 1;
+        return id;
+    }
+
+    return {
+        next: next
+    }
+})();
+
+let userIdGenerator = (function () {
+    let id = 0;
+
+    function next(){
+        id += 1;
+
+        return id;
+    }
+
+    return{
+        next:next
+    }
+
+})();
+
+let postIdGenerator = (function () {
+    let id = 0;
+
+    function next(){
+        id += 1;
+
+        return id;
+    }
+
+    return{
+        next:next
+    }
+
+})();
+
+export {
+    date,
+    fileIdGenerator,
+    threadIdGenerator,
+    userIdGenerator,
+    postIdGenerator
+
+}
