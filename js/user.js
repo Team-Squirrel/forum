@@ -7,7 +7,7 @@ class User {
         this.email = email;
         this.role = "user";
         this.createdOn = utils.date.getDate();
-        this.id = utils
+        this.id = utils.userIdGenerator.next();
     }
 
 }

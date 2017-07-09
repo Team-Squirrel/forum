@@ -35,15 +35,13 @@ let date = (function() {
 
 })();
 
-let next = function(id){
-    id += 1;
-    return id;
-}
-
 let fileIdGenerator = (function () {
     let id = 0;
 
-    next(id);
+    let next = function(id){
+        id += 1;
+        return id;
+    }
 
     return {
         next: next
@@ -53,7 +51,10 @@ let fileIdGenerator = (function () {
 let threadIdGenerator = (function () {
     let id = 0;
     
-    next(id);
+    let next = function(id){
+        id += 1;
+        return id;
+    }
 
     return {
         next: next
@@ -63,7 +64,10 @@ let threadIdGenerator = (function () {
 let userIdGenerator = (function () {
     let id = 0;
 
-    next(id);
+    let next = function(id){
+        id += 1;
+        return id;
+    }
 
     return{
         next:next
@@ -74,7 +78,10 @@ let userIdGenerator = (function () {
 let postIdGenerator = (function () {
     let id = 0;
 
-    next(id);
+    let next = function(id){
+        id += 1;
+        return id;
+    }
 
     return{
         next:next
