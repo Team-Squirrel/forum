@@ -39,12 +39,51 @@ export function init() {
                     }).then(function () {
                         console.log("Profile created successfully.");
                     });
-                    
                 })
-
         }
     });
 
-    
+    function validate(){
+        if(!(/^[0-9a-zA-Z]+$/).text($enterPassword.val())){
+            alert("The password must contain only numbers and latin letters.");
+            return false;
+        }
 
+        if(!($enterPassword.val())){
+            alert("The password cannot be null.");
+            return false;
+        }
+
+        if($enterPassword.val() === ""){
+            alert("The password cannot be empty.");
+            return false;
+        }
+
+        if(!(/^[0-9a-zA-Z]+$/).test($enterUsername.val())){
+            alert("The username must contain only numbers and latin letters.");
+            return false;
+        }
+
+        if($enterUsername.val() === ""){
+            alert("The username cannot be empty.");
+            return false;
+        }
+
+        if(!(/^[0-9a-zA-Z@.]+$/).test($enterEmail.val())){
+            alert("The email address must contain only numbers, latin letters and the symbol '@'.");
+            return false;
+        }
+
+        if($enterEmail.val() === ""){
+            alert("The email address cannot be empty.");
+            return false;
+        }
+
+        if($enterEmail.val().indexOf('@') === -1){
+            alert('Invalid email address.');
+            return false;
+        }
+
+        return true;
+    }
 }
