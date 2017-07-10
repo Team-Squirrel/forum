@@ -9,6 +9,11 @@ class User {
         this.role = "user";
         this.createdOn = utils.date.getDate();
         this.id = utils.userIdGenerator.next();
+        this.showEmailSetting = false;
+        this.receiveEmailsSetting = false;
+        this.posts = [];
+        this.threads = [];
+        this.notifications = [];
     }
 
     get name(){
