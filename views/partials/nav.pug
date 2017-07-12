@@ -1,4 +1,4 @@
-nav(class="navbar navbar-inverse navbar-default")
+nav(class="navbarnavbar-default")
   div(class="container")
     div(class="navbar-header")
       button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
@@ -10,27 +10,17 @@ nav(class="navbar navbar-inverse navbar-default")
     div(id="navbar", class="navbar-collapse collapse")
       ul(class="nav navbar-nav")
         li(class="active") 
-          a(href="#") Home
+          a(href="#") Questions
         li
-          a(href="#about") About
+          a(href="#about") Tags
         li
-          a(href="#contact") Contact
-        li(class="dropdown")
-          a(href="#", class="dropdown-toggle", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") Dropdown 
-            span(class="caret")
-            ul(class="dropdown-menu")
-              li
-                a(href="#") Action
-              li 
-                a(href="#") Another action
-              li
-                a(href="#") Something else here
-              li(role="separator", class="divider")
-              li(class="dropdown-header") Nav header
-              li
-                a(href="#") Separated link
-              li
-                a(href="#") One more separated link
+          a(href="#contact") Users
+      form(class="navbar-form navbar-left", role="search", _lpchecked="1")
+        div(class="input-group")
+          input(type="text", placeholder="Search", class="form-control")
+          span(class="input-group-btn")
+            button(type="submit", class="btn btn-default")
+              span(class="glyphicon glyphicon-search")
       form(class="navbar-form navbar-right", _lpchecked="1")
         div(class="form-group")
           input(type="text", placeholder="Email", class="form-control", autocomplete="off")
