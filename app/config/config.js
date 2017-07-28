@@ -16,7 +16,7 @@ const applyTo = (app) => {
     app.use('/libs', express.static(libsPath));
 
     const publicsPath = path.join(__dirname, '../../public');
-    app.use('/public', express.static(publicsPath));
+    app.use('/', express.static(publicsPath));
 
     // app.use(cookieParser('keyboard cat'));
 };

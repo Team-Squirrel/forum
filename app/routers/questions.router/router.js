@@ -27,6 +27,12 @@ const attachTo = (app, data) => {
             }
 
             return controller.store(req, res);
+        })
+        .get('/:id', (req, res) => {
+            return Promise.resolve()
+                .then(() => {
+                    return controller.show(req, res);
+                });
         });
 
     app.use('/questions', router);

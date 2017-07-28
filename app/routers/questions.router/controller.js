@@ -25,8 +25,13 @@ class QuestionsController {
     }
 
     show(req, res) {
-        return Promise.resolve()
-            .then(() => res.render('questions/show'));
+        return this.data.questions
+            .findById(req.params.id)
+            .then((question) => {
+                return res.render('questions/show', {
+                    context: question,
+                });
+            });
     }
 }
 
