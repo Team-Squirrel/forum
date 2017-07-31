@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,17 @@
   "homepage": "https://github.com/Team-Squirrel/forum#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "express-messages": "^1.0.1",
+    "mongodb": "^2.2.30",
     "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.3.0",
+    "eslint-config-google": "^0.9.1",
+    "faker": "^4.1.0"
   }
 }
