@@ -51,6 +51,24 @@ const init = (data) => {
                 return res.redirect('/questions/' + dbQuestion.id);
             })
     });
+
+    app.get('/tags', (req, res) => {
+        return data.tags.getAll()
+            .then((tags) => {
+                return res.render('tags/all', {
+                    context: tags,
+                });
+            });
+    });
+
+    app.post('/tags', (req, res) => {
+        const tag = req.body;
+        return data.tags.create(tag)
+            .then((dbTag) => {
+                return res.redirect('/tags/' + dbTag.id);
+            })
+    });
+
 /*
     app.post('/questions', (req, res, user) => {
         const question = req.body;
