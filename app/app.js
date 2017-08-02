@@ -41,7 +41,30 @@ const init = (data) => {
                 return res.redirect('/questions/' + dbQuestion.id);
             })
     });
+/*
+    app.post('/questions', (req, res, user) => {
+        const question = req.body;
 
+        if(!question){
+            throw new Error("Question cannot be empty.");
+        }
+
+        findByUsername(username) {
+            return this
+                .filterBy({ username: new RegExp(username, 'i') })
+                .then(([user]) => user);
+        }
+
+        if (!user) {
+            throw new Error('Invalid user');
+        }
+
+        return data.questions.create(question)
+            .then((dbQuestion) => {
+                return res.redirect('/questions/' + dbQuestion.id)
+            })
+    });
+*/
     return Promise.resolve(app);
 };
 
