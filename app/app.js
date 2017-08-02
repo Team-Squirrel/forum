@@ -1,6 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const init = (data) => {
+
     const app = express();
 
     require('./config').applyTo(app);
@@ -13,6 +15,32 @@ const init = (data) => {
 
     require('./routers')
         .attachTo(app, data);
+
+    app.set('view engine', 'pug');
+
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
+
+    app.get('/', (req, res) => {
+        return res.render('home');
+    });
+
+    app.get('/questions', (req, res) => {
+        return data.questions.getAll()
+            .then((questions) => {
+                return res.render('questions/all', {
+                    context: questions,
+                });
+            });
+    });
+
+    app.post('/questions', (req, res) => {
+        const question = req.body;
+        return data.questions.create(question)
+            .then((dbQuestion) => {
+                return res.redirect('/questions/' + dbQuestion.id);
+            })
+    });
 
     return Promise.resolve(app);
 };

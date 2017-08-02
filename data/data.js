@@ -8,4 +8,6 @@ const init = (db) => {
     });
 };
 
+//console.log(init.name);
+
 module.exports = { init };
