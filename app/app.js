@@ -1,5 +1,10 @@
+/* globals __dirname */
+
+const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 const init = (data) => {
 
@@ -20,6 +25,11 @@ const init = (data) => {
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
+
+    app.use('/libs', express.static(path.join(__dirname, '../node_modules/')))
+
+    app.use(cookieParser('keyboard cat'));
+    app.use(session({ cookie: { maxAge: 40000 } }));
 
     app.get('/', (req, res) => {
         return res.render('home');
@@ -47,6 +57,10 @@ const init = (data) => {
 
         if(!question){
             throw new Error("Question cannot be empty.");
+        }
+
+        if (!BaseMongoDbData._isModelValid(user)) {
+            return Promise.reject('Validation failed!');
         }
 
         findByUsername(username) {
