@@ -5,7 +5,7 @@ class BaseMongoDbData {
         this.db = db;
         this.modelClass = modelClass;
         this.collectionName = this._getCollectionName();
-        this.collection = this.db.collection[this.collectionName];
+        this.collection = this.db.collection(this.collectionName);
     }
 
     filterBy(props) {

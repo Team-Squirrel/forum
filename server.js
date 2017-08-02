@@ -1,9 +1,5 @@
 /* eslint-disable no-console */
 
-
-
-
-/*
 const config = require('./config');
 
 Promise.resolve()
@@ -18,11 +14,15 @@ Promise.resolve()
         console.log(err);
     });
 
-*/
+
+/*
 
 const db = require('./db')//.init(config.conectionString);
 const data = require('./data').init(db);
 const app = require('./app').init(data);
 
 app.listen(3001, () => console.log('Magic at 3001'));
+
+*/
+
 
